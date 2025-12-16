@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int pin = 1234, giris, secim;
+    float balans = 500, mebleg;
+    printf("PIN daxil edin: ");
+    scanf("%d", &giris);
+    if (giris != pin) {
+        printf("Yanlis PIN!\n");
+        return 0;
+    }
+    printf("1-Balans\n2-Pul cixar\n3-Pul yatir\nSecim: ");
+    scanf("%d", &secim);
+    if (secim == 1)
+        printf("Balans: %.2f AZN\n", balans);
+    else if (secim == 2) {
+        printf("Mebleg: ");
+        scanf("%f", &mebleg);
+        if (mebleg <= balans)
+            printf("Yeni balans: %.2f AZN\n", balans -= mebleg);
+        else
+            printf("Kifayet etmir!\n");
+    }
+    else if (secim == 3) {
+        printf("Mebleg: ");
+        scanf("%f", &mebleg);
+        printf("Yeni balans: %.2f AZN\n", balans += mebleg);
+    }
+    else
+        printf("Yanlis secim!\n");
+    return 0;
+}
