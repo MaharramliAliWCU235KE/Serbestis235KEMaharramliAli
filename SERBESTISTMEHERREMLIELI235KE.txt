@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    int pin = 1234, giris, secim;
-    float balans = 500, mebleg;
+    int pin = 4380, giris, secim;
+    float balans = 7000, mebleg;
     printf("PIN daxil edin: ");
     scanf("%d", &giris);
     if (giris != pin) {
@@ -30,3 +30,4 @@ int main() {
         printf("Yanlis secim!\n");
     return 0;
 }
+
